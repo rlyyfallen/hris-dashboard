@@ -1,33 +1,63 @@
-body { 
-    font-family: Arial, sans-serif; 
-    background-color: #f4f4f4; 
-    text-align: center; 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
 }
-
-button { 
-    padding: 10px; 
-    margin: 5px; 
-    cursor: pointer; 
-    background: #3498db; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
-
-button:hover { 
-    background: #2980b9; 
+button:hover {
+    background: #2980b9;
 }
-
-.tab { 
-    display: none; 
-    padding: 20px; 
-    background: white; 
-    margin: 20px auto; 
-    border-radius: 10px; 
-    width: 50%; 
+.tab {
+    display: none;
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
-.active { 
-    display: block; 
+.active {
+    display: block;
+}
+form {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+}
+form label {
+    display: inline-block;
+    width: 150px;
+}
+form input {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: calc(100% - 160px);
+}
+form button {
+    background: #2ecc71;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background: #27ae60;
+}
+#payrollResult {
+    background: #dff9fb;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
 }

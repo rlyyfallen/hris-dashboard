@@ -1,41 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR Management Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<div id="payroll" class="tab active">
+    <h2>Payroll Section</h2>
+    <form id="payrollForm">
+        <label for="employeeName">Employee Name:</label>
+        <input type="text" id="employeeName" required><br><br>
 
-    <h1>HR Management Dashboard</h1>
-    <button onclick="showTab('payroll')">Payroll</button>
-    <button onclick="showTab('investment')">Investments</button>
-    <button onclick="showTab('holidays')">Holidays</button>
-    <button onclick="showTab('tasks')">Tasks</button>
+        <label for="hoursWorked">Hours Worked:</label>
+        <input type="number" id="hoursWorked" required><br><br>
 
-    <div id="payroll" class="tab active">
-        <h2>Payroll Section</h2>
-        <p>Salary details go here.</p>
+        <label for="hourlyRate">Hourly Rate ($):</label>
+        <input type="number" id="hourlyRate" required><br><br>
+
+        <button type="submit">Calculate Payroll</button>
+    </form>
+
+    <div id="payrollResult" style="display:none; margin-top:20px;">
+        <h3>Payroll Summary for <span id="displayName"></span></h3>
+        <p>Gross Pay: $<span id="grossPay"></span></p>
+        <p>Overtime Pay: $<span id="overtimePay"></span></p>
+        <p>Total Pay: $<span id="totalPay"></span></p>
     </div>
-
-    <div id="investment" class="tab">
-        <h2>Investment Section</h2>
-        <p>PPF and 401k details go here.</p>
-    </div>
-
-    <div id="holidays" class="tab">
-        <h2>Holidays Section</h2>
-        <p>Holiday tracking goes here.</p>
-    </div>
-
-    <div id="tasks" class="tab">
-        <h2>Task Checklist</h2>
-        <input type="checkbox"> Verify Payroll <br>
-        <input type="checkbox"> Update Employee Records <br>
-        <input type="checkbox"> Check 401k Contributions <br>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>HRIS Dashboard</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li onclick="switchTab('employees')">Employees</li>
+            <li onclick="switchTab('payroll')">Payroll</li>
+            <li onclick="switchTab('calendar')">Leave Calendar</li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="employees">
+            <h2>👤 Add Employee</h2>
+            <input type="text" id="empName" placeholder="Employee Name">
+            <input type="number" id="salary" placeholder="Salary">
+            <input type="text" id="department" placeholder="Department">
+            <button onclick="addEmployee()">➕ Add Employee</button>
+            <canvas id="employeeChart"></canvas>
+        </section>
+
+        <section id="payroll">
+            <h2>💰 Payroll Calculator</h2>
+            <input type="number" id="baseSalary" placeholder="Base Salary">
+            <button onclick="calculatePayroll()">Calculate</button>
+            <p id="payrollResult">Net Salary: ₹0</p>
+            <canvas id="payrollChart"></canvas>
+        </section>
+
+        <section id="calendar">
+            <h2>📅 Event Calendar</h2>
+            <input type="date" id="eventDate">
+            <input type="text" id="eventName" placeholder="Event Name">
+            <input type="text" id="eventDesc" placeholder="Event Description">
+            <button onclick="addEvent()">➕ Add Event</button>
+            <ul id="eventList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
